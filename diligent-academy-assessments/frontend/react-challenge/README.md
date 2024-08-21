@@ -28,6 +28,4 @@ A simple React app that displays a list of heroes with the ability to toggle the
 
 ## Technologies Used
 
-   React
-   TypeScript
-   CSS
+   React , TypeScript, CSS
