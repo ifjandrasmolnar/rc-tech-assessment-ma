@@ -1,0 +1,16 @@
+.hero-item {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px;
+    
+    display: inline-block; /* To ensure items align properly in a row */
+  }
+  
+  .hero-item.available {
+    color: green;
+  }
+  
+  .hero-item.unavailable {
+    color: red;
+  }
+  
