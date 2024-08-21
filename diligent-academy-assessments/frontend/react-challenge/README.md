@@ -1,30 +1,33 @@
-# React challenge
+# Hero List React App
 
-Create a React component for listing heroes.
+A simple React app that displays a list of heroes with the ability to toggle their availability status.
 
-## Principles and rules
+## Features
 
-- You can create as many files as you need.
+- Display heroes with their availability.
+- Toggle availability by clicking on a hero.
+- Heroes are displayed in a responsive 3x4 grid.
 
-# Tasks
+## Installation
 
-1. Use the given async function in `call-api.ts` to acquire a list of heroes and render them into a list.
-   Heroes have ids, names and wether they are available. If a hero is available, print “Available“.
+1. Clone the repository:
 
+   ```bash
+   git clone https://github.com/ifjandrasmolnar/rc-tech-assessment-ma.git
+   cd rc-tech-assessment-ma/diligent-academy-assessments/frontend/react-challenge
 
-2. Create a separate component for hero list items.
+2. Install dependecies
 
+   npm install
 
-3. When clicking on a hero, switch it from available to unavailable and vice versa. The change should be reflected in the UI.
+3. Start the development server:
+   
+   npm start
 
+4. Visit http://localhost:3000/ to view the app.
 
-4. Show a "Loading" message while we are fetching the heroes. If the fetch fails, show an error message like "Failed to fetch heroes.
+## Technologies Used
 
-
-5. Style the components to look similar to this image:
-   ![img.png](img.png)
-   **The exact colors, paddings, margins, etc. are not important, but the general layout should be similar.**
-
-
-6. Create a custom hook for wrapping the fetch functionality.
-
+   React
+   TypeScript
+   CSS
