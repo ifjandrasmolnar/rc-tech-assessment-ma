@@ -2,17 +2,24 @@
  * Calls API with a specific route and a promise of the required resource.
  * @param route - eg. "heroes"
 */
-export const callApi = async <T>(route: string): Promise<T> => {
+export const callApi = async <T = Hero[]>(route: string): Promise<T> => {
   switch (route) {
     case "heroes":
-      return fetchHeroes();
+      return fetchHeroes() as unknown as T;
     default:
       throw new Error("Invalid route");
   }
 };
 
-const fetchHeroes = async <T>(): Promise<T> => {
-  const heroes = [
+// Define a type for Hero
+interface Hero {
+  id: number;
+  name: string;
+  available: boolean;
+}
+
+const fetchHeroes = async (): Promise<Hero[]> => {
+  const heroes: Hero[] = [
     {
       id: 1,
       name: "Superman",
@@ -60,7 +67,7 @@ const fetchHeroes = async <T>(): Promise<T> => {
     },
     {
       id: 10,
-      name: "Wonder Woman ",
+      name: "Wonder Woman",
       available: false,
     },
     {
@@ -70,9 +77,9 @@ const fetchHeroes = async <T>(): Promise<T> => {
     },
   ];
 
-  const promise = new Promise<T>((resolve) => {
+  const promise = new Promise<Hero[]>((resolve) => {
     setTimeout(() => {      
-      resolve(heroes as T);
+      resolve(heroes);
     }, 1000);
   });
 
